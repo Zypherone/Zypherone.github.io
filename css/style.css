@@ -1,52 +1,7 @@
-body {
-    background: #efeee7;
-    color: #333;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;    
+header.jumbotron {
+    position: relative;
+    top: -50px;
+    z-index: 200;
+    text-shadow: 3px 3px 3px #ffffff;
+    
 }
-
-.container {
-    margin: 0 auto;
-    width: 1024px;
-}
-
-header {
-    background: #333;
-    padding: 25px;
-}
-
-h1 {
-    color: #eee;
-    font-size: 28px;
-    text-align:  center;
-}
-
-h2 {
-    font-size: 24px;
-    margin: 1em 0;
-}
-
-
-#main-bio {
-    overflow: hidden;
-    width: 100%;
-}
-
-#bio-image {
-    background: lightgray;
-    display: block;
-    float: left;
-    height: 200px;
-    margin: 0 1em 1em 0;
-    width: 200px;
-}
-
-a {
-    color: #d21034;
-}
-
-p {
-   
-}
-
