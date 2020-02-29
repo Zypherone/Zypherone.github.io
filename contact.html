@@ -7,7 +7,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Zypherone - Danu Tucker-Saunders - Contact Info</title>
 </head>
 <body>
@@ -19,14 +19,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="portfolio.html">Portfolio</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -35,8 +35,8 @@
   </div>
 </nav>
 <!-- Temp CSS styling for testing purposes only -->
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="height: 200px !important; overflow: hidden;">
-  <div class="carousel-inner" style="position: relative; top: -300px; ">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="images/hero-01.jpg" class="d-block w-100" alt="...">
     </div>
@@ -51,18 +51,27 @@
 
 <div class="container">
 
-  <header style="display: none;">
-    <h1>Contact</h1>
+  <header class="jumbotron jumbotron-fluid rounded-lg">
+    <div class="container">
+      <h1 class="display-4">Contact</h1>
+      <p class="lead">Feel free to contact me for anything using the below contact details!</p>
+    </div>
   </header>
+
   <section>
-    <h2>Contact Info</h2>
-    <ul>
-        <li>Email: <a href="mailto:danutuckersaunders@email.com">danutuckersaunders@email.com</a></li>
-        <li>Github: <a href="https://github.com/Zypherone" targat="_blank">Zypherone</a></li>
-        <li>Portfolio: ...</li>
-    </ul>
-</section>
+    <div class="row">
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action">Email: <a href="mailto:danutuckersaunders@email.com" title="Email Me!">danutuckersaunders@email.com</a></li>
+          <li class="list-group-item list-group-item-action">Github: <a href="https://github.com/Zypherone" targat="_blank"  title="Github Repo">Zypherone</a></li>
+          <li class="list-group-item list-group-item-action">Twitter: <a href="https://twitter.com/Zypherone" targat="_blank"  title="Twitter Profilfe">@Zypherone</a></li>
+          <li class="list-group-item list-group-item-action">LinkedIn: <a href="https://www.linkedin.com/in/danutuckersaunders/" targat="_blank" title="LInkedIn Profilfe">@Zypherone</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>
+
 <footer class="footer mt-auto py-3">
   <div class="container">
     <span class="text-muted">Copyright (c) Zypherone Studios</span>

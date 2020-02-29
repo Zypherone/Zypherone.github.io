@@ -19,11 +19,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="portfolio.html">Portfolio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contact.html">Contact</a>
@@ -35,8 +35,8 @@
   </div>
 </nav>
 <!-- Temp CSS styling for testing purposes only -->
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="height: 200px !important; overflow: hidden;">
-  <div class="carousel-inner" style="position: relative; top: -300px; ">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="images/hero-01.jpg" class="d-block w-100" alt="...">
     </div>
@@ -51,18 +51,37 @@
 
 <div class="container">
 
-  <header style="display: none;">
-    <h1>Portfolio</h1>
+  <header class="jumbotron jumbotron-fluid rounded-lg">
+    <div class="container">
+      <h1 class="display-4">Portfolio</h1>
+      <p class="lead">See my web design portfolio of beautiful information websites and ecommerce stores...</p>
+    </div>
   </header>
-  <section id="main-bio">
 
+  <section>
+    <div class="row">
+      <div class="col-6">
+        <figure class="figure">
+          <img src="images/portfolio-01.png" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption">A caption for the above image.</figcaption>
+        </figure>
+      </div>
+      <div class="col-6">
+        <figure class="figure">
+          <img src="images/portfolio-02.jpg" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption">A caption for the above image.</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 </div>
+
 <footer class="footer mt-auto py-3">
   <div class="container">
     <span class="text-muted">Copyright (c) Zypherone Studios</span>
   </div>
 </footer>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
