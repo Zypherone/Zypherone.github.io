@@ -278,12 +278,22 @@ input[type  =submit] {
     top: 0;
   }
 
+  section {
+    word-break: break-all;
+    max-height: calc(100% - 50px);
+  }
+
+  #slider-container {
+    max-height: calc(100% - 50px);
+  }
+
   footer {
     height: 50px;
     min-width: calc(100% - 50px);
   }
 
   #name {
+    font-size: 5.2vw;
     text-align: center;
     transform: none;
     writing-mode: initial;
