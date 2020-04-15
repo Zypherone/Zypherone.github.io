@@ -258,15 +258,36 @@ input[type  =submit] {
 }
 
 @media only screen and (max-width: 700px) {
+
+  #inner-container {
+    flex-wrap: wrap;
+  }
+
   header h1 {
     display: none;
   }
 
   header  { order: 3; position: relative; z-index: 99; }
   section { order: 2; position: relative; z-index: 10; }
-  footer  { order: 1; position: relative; z-index: 99; }
+  footer  { order: 1; position: relative; z-index: 98; }
 
+  header {
+    right: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+  }
 
+  footer {
+    height: 50px;
+    min-width: calc(100% - 50px);
+  }
+
+  #name {
+    text-align: center;
+    transform: none;
+    writing-mode: initial;
+  }
 
 
   .menu {
