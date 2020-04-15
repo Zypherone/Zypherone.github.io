@@ -237,6 +237,7 @@ h2 span {
   font-size: 15vw;
   padding-top: 100px;
   text-align: center;
+  transform: scale(1.4);
 }
 
 #home p {
@@ -428,7 +429,7 @@ input[type  =submit] {
   }
 
   h2 {
-    margin: 0 0 1em;
+    margin: 0 0 .5em;
   }
   h3 {
     margin: .5em 0;
