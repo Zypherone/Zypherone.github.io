@@ -257,6 +257,7 @@ h2 span {
 }
 */
 #about img {
+  border-radius: .5em;
   float: right;
   margin: 0   0 50px 50px;
 }
@@ -423,6 +424,14 @@ input[type  =submit] {
 
   #slider-container {
     max-height: calc(100% - 50px);
+    padding: 15px 50px; 
+  }
+
+  h2 {
+    margin: 0 0 1em;
+  }
+  h3 {
+    margin: .5em 0;
   }
 
   footer {

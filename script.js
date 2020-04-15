@@ -50,7 +50,7 @@ $(document).on('touchstart', '.slide', function(evt) {
 
 $(document).on('touchend', '.slide', function(evt) {
 
-  console.log($(evt)[0].currentTarget);
+//  console.log($(evt)[0].currentTarget);
   
   if (touchStart !== 0) {
     const touchEnd = evt.changedTouches[0].screenX;
