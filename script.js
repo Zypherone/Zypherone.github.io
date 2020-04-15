@@ -49,6 +49,9 @@ $(document).on('touchstart', '.slide', function(evt) {
 });
 
 $(document).on('touchend', '.slide', function(evt) {
+
+  console.log($(evt)[0].currentTarget);
+  
   if (touchStart !== 0) {
     const touchEnd = evt.changedTouches[0].screenX;
     const touchDirection = touchStart < touchEnd ? 'prev' : 'next';
@@ -56,7 +59,7 @@ $(document).on('touchend', '.slide', function(evt) {
     const elmId = $($(evt)[0].currentTarget).attr('id');
 
     $(`#${elmId} .slide-${touchDirection} a`).trigger('click', 'touch');
-    
+
     touchStart = 0;
   }
 });
