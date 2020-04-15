@@ -1,9 +1,6 @@
-$(document).on('click', 'a[data-type="slide"]', function(evt) {
+function touchAndClickEvent(evt) {
+
   evt.preventDefault();
-
-  //console.log($($(this).attr('href')).get(0).offsetLeft);
-
-  
 
   $('.slide-holder')[0].scrollTo({
     top: 0,
@@ -11,14 +8,8 @@ $(document).on('click', 'a[data-type="slide"]', function(evt) {
     behavior: 'smooth'
   })
 
-  //.delay('1000', function() {
-    //window.location.hash = $(this).attr('href');
-    window.history.pushState(null, null, $(this).attr('href'));
-  //})
-
-  
-  //$('.slide-holder')[0].scrollTo($($(this).attr('href')));
-});
+  window.history.pushState(null, null, $(this).attr('href'));
+}
 
 $.each($('.slide'), function(key, value) {
 
@@ -39,3 +30,7 @@ $.each($('.slide'), function(key, value) {
     $(value).append(button.next);
   }
 })
+
+$(document).on('click', 'a[data-type="slide"]', touchAndClickEvent);
+$(document).on('touchstart', 'a[data-type="slide"]', touchAndClickEvent);
+

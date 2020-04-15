@@ -52,15 +52,15 @@ h1 {
   font-size: 2em;
 }
 
-nav {
-  
-}
-
 header ul,
 header li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.menu {
+  display: none;
 }
 
 header nav a,
@@ -262,23 +262,41 @@ input[type  =submit] {
     display: none;
   }
 
-  header  { order: 3; }
-  section { order: 2; }
-  footer  { order: 1; }
+  header  { order: 3; position: relative; z-index: 99; }
+  section { order: 2; position: relative; z-index: 10; }
+  footer  { order: 1; position: relative; z-index: 99; }
 
 
 
 
   .menu {
-    display: block;
-    margin-top: 10px;
+
     height: 50px;
+    line-height: 50px;
     text-align: center;
+    
     width: 50px;
   }
 
-  .menu:focus ~ ul,
-  .menu:hover ~ ul {
+  .menu .icon {
+    font-size: 150%;
+  }
+
+  .menu.menu-show { display: inline-block; }
+  .menu.menu-hide { display: none; }
+
+  .menu.menu-show:focus {
+    right: -50px;
+    position: fixed;
+    
+  }
+
+  .menu.menu-show:focus + .menu-hide {
+    background: blue;
+    display: inline-block;    
+  }
+
+  .menu.menu-show:focus ~ ul {
     display: block;
   }
 
