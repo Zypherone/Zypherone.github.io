@@ -1,12 +1,20 @@
-function touchAndClickEvent(evt) {
+function touchAndClickEvent(evt, type) {
 
   evt.preventDefault();
 
-  $('.slide-holder')[0].scrollTo({
-    top: 0,
-    left: $($(this).attr('href')).get(0).offsetLeft,
-    behavior: 'smooth'
-  })
+
+  $('.slide').removeClass('active');
+  $($(this).attr('href')).addClass('active');
+
+  if (type !== 'touch') {
+
+    $('.slide-holder')[0].scrollTo({
+      top: 0,
+      left: $($(this).attr('href')).get(0).offsetLeft,
+      behavior: 'smooth'
+    })
+
+  }
 
   window.history.pushState(null, null, $(this).attr('href'));
 }
@@ -33,4 +41,23 @@ $.each($('.slide'), function(key, value) {
 
 $(document).on('click', 'a[data-type="slide"]', touchAndClickEvent);
 $(document).on('touchstart', 'a[data-type="slide"]', touchAndClickEvent);
+
+let touchStart = 0;
+
+$(document).on('touchstart', '.slide', function(evt) {
+  touchStart = evt.changedTouches[0].screenX;
+});
+
+$(document).on('touchend', '.slide', function(evt) {
+  if (touchStart !== 0) {
+    const touchEnd = evt.changedTouches[0].screenX;
+    const touchDirection = touchStart < touchEnd ? 'prev' : 'next';
+
+    const elmId = $($(evt)[0].currentTarget).attr('id');
+
+    $(`#${elmId} .slide-${touchDirection} a`).trigger('click', 'touch');
+    
+    touchStart = 0;
+  }
+});
 

@@ -116,8 +116,13 @@ section {
 .slide {
   height: 100%;
   min-width: 100%;
+  overflow: hidden;
   position: relative;
   scroll-snap-align: start;
+}
+
+.slide::-webkit-scrollbar {
+  display: none;
 }
 
 .slide:nth-child(even) {
@@ -129,10 +134,16 @@ section {
   bottom: 0;
   display: flex;
   justify-content: center;
+  opacity: 0;
   pointer-events: none;
   position: absolute;
+  transition: opacity .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   top: 0;
   width: 50px;
+}
+
+.slide.active .slide-button {
+  opacity: 1;
 }
 
 .slide-prev {
@@ -234,10 +245,29 @@ h2 span {
  * About 
  */
 
+ /*
+#about img {
+  
+  float: right;
+  margin-right: -50px;
+  shape-outside: polygon(0% 100%, 2% 73%, 10% 60%, 10% 60%, 16% 60%, 16% 60%, 12% 40%, 12% 40%, 22% 2%, 22% 2%, 22% 2%, 22% 5%, 65% 0%, 65% 0%, 68% 7%, 68% 7%, 77% 16%, 77% 16%, 75% 36%, 75% 36%, 59% 57%, 59% 57%, 67% 66%, 83% 80%, 83% 80%, 100% 100%, 100% 100%); 
+  width: 40%;
+}
+*/
 #about img {
   float: right;
-  
+  margin: 0   0 50px 50px;
 }
+
+@media only screen and (max-width: 700px) {
+
+  #about img {
+    max-width: 45%;
+    margin: 0 0 15px 15px;
+  }
+
+}
+
 
 /*
  * Portfolio
@@ -248,6 +278,7 @@ h2 span {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 #portfolio li {
   width: calc(100% / 3);
 }
@@ -256,6 +287,12 @@ h2 span {
   content: '';
   display: table;
   padding-top: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  #portfolio li {
+    width: calc(100% / 2);
+  }
 }
 
 
