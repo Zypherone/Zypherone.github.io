@@ -119,6 +119,7 @@ section {
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .slide::-webkit-scrollbar {
