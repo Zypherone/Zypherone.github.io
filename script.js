@@ -50,10 +50,11 @@ $(document).on('touchstart', '.slide', function(evt) {
 
 $(document).on('touchend', '.slide', function(evt) {
 
-//  console.log($(evt)[0].currentTarget);
-  
-  if (touchStart !== 0) {
-    const touchEnd = evt.changedTouches[0].screenX;
+  //console.log(touchStart,   evt.changedTouches[0].screenX);
+  const touchEnd = evt.changedTouches[0].screenX;
+
+  if (touchStart !== 0 && touchStart !== touchEnd) {
+    
     const touchDirection = touchStart < touchEnd ? 'prev' : 'next';
 
     const elmId = $($(evt)[0].currentTarget).attr('id');

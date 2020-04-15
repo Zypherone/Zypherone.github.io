@@ -114,12 +114,25 @@ section {
 }
 
 .slide {
+  background: linear-gradient(180deg, #899199, #899199 5px, #1d1d1d 5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1px;
   height: 100%;
   min-width: 100%;
+  opacity: 0;
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  transition: 
+    background-size .5s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    opacity 1s ease-in;
+}
+
+.slide.active {
+  background-size: 100%;
+  opacity: 1;
 }
 
 .slide::-webkit-scrollbar {
@@ -438,10 +451,14 @@ input[type  =submit] {
   footer {
     height: 50px;
     min-width: calc(100% - 50px);
+    min-width: 100%;
   }
 
   #name {
     font-size: 5.2vw;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
     text-align: center;
     transform: none;
     writing-mode: initial;
