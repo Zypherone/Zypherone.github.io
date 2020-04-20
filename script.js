@@ -42,26 +42,108 @@ $.each($('.slide'), function(key, value) {
 $(document).on('click', 'a[data-type="slide"]', touchAndClickEvent);
 $(document).on('touchstart', 'a[data-type="slide"]', touchAndClickEvent);
 
-let touchStart = 0;
+$(document).on('touchstart', '.slide', startTouch);
+$(document).on('touchmove', '.slide', moveTouch);
 
+
+if (location.hash) {
+  console.log(location.hash);
+  $('a[data-type="slide"][href="' + location.hash + '"]').trigger('click');
+}
+
+var initialX = null;
+var initialY = null;
+ 
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+  initialY = e.touches[0].clientY;
+};
+ 
+function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+ 
+  if (initialY === null) {
+    return;
+  }
+ 
+  const currentX = e.touches[0].clientX;
+  const currentY = e.touches[0].clientY;
+ 
+  const diffX = initialX - currentX;
+  const diffY = initialY - currentY;
+
+  if(initialX !== 0 && initialX !== currentX) {
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      // sliding horizontally
+
+      const touchDirection = (diffX > 0) ? 'next' : 'prev';
+
+      const elmId = $($(e)[0].currentTarget).attr('id');
+
+      $(`#${elmId} .slide-${touchDirection} a`).trigger('click', 'touch');
+    } 
+  }
+  initialX = null;
+  initialY = null;
+
+  
+  e.preventDefault();
+};
+
+$('form').on('submit', function(e) {
+  e.preventDefault();
+
+  console.log(this);
+});
+
+/*
+let touchStartX = 0,
+    touchEndY   = 0;
+
+    /*
 $(document).on('touchstart', '.slide', function(evt) {
-  touchStart = evt.changedTouches[0].screenX;
+  touchStartX = evt.changedTouches[0].screenX;
+  touchStartY = evt.changedTouches[0].screenY;
 });
 
 $(document).on('touchend', '.slide', function(evt) {
 
   //console.log(touchStart,   evt.changedTouches[0].screenX);
-  const touchEnd = evt.changedTouches[0].screenX;
+  const touchEndX = evt.changedTouches[0].screenX;
+  const touchEndY = evt.changedTouches[0].screenY;
 
-  if (touchStart !== 0 && touchStart !== touchEnd) {
+    console.log('X', touchStartX, touchEndX);
+    console.log('Y',touchStartY, touchEndY);
+
+  if (touchStartX !== 0 && touchStartX !== touchEndX) {
     
-    const touchDirection = touchStart < touchEnd ? 'prev' : 'next';
+    const touchDirection = touchStartX < touchEndX ? 'prev' : 'next';
 
     const elmId = $($(evt)[0].currentTarget).attr('id');
 
     $(`#${elmId} .slide-${touchDirection} a`).trigger('click', 'touch');
 
-    touchStart = 0;
+    
   }
+
+  //touchStart = 0;
 });
 
+$('form').on('submit', function() {
+  console.log(this);
+});
+
+/*
+Email.send({
+  SecureToken : "a39c81ab-036d-4443-a7bd-bf78b70e4cde",
+  To : 'danutuckersaunders@email.com',
+  From : "danutuckersaunders@email.com",
+  Subject : "This is the subject",
+  Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+*/

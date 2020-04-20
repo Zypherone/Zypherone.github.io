@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|La+Belle+Aurore|Montserrat|Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="assets/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -46,7 +47,7 @@
               <div class="slide-container">
                 <h2>Danu Tucker-Saunders <span>Zypherone</span></h2>
                 <p class="intro">I'm Dan.</p>
-                <p>a full-stack developer.</p>
+                <p class="intro-tag-line">a full-stack developer.</p>
               </div>
             </div>
             <div class="slide" id="about">
@@ -61,21 +62,32 @@
                 <p>Was formally a bar manager at an established restaurant, with over ten years in customer service, hospitality and concierge, my unique insight allows me to problem solve and understand customers need. With extensive knowledge in communicating with various stakeholders, put me in a unique position to deliver and satisfy customers expectation.</p>
                 <p>My interests and hobbies extend to reading, problem solving and ancient history.</p>
                 <h3>Skills</h3>
-                <p>Full Stack Developer | Freelancer</p>
-                <p>I'm a freelance developer based in Sydney, Australia.</p>
-                
+                <ul>
+                  <li><i class="icon html5"></i> HTML5</li>
+                  <li><i class="icon css3 alternate"></i> CSS3</li>
+                  <li><i class="icon php"></i> PHP</li>
+                  <li><i class="icon python"></i> Python</li>
+                  <li><i class="icon js"></i> Javascript</li>
+                  <li><i class="icon "></i> JQuery</li>
+                  <li><i class="icon "></i> Bootstrap</li>
+                  <li><i class="icon "></i> Firebase</li>
+                  <li><i class="icon node js"></i> Node Js</li>
+                  <li><i class="icon "></i> MySQL</li>
+                  <li><i class="icon "></i> MongoDB</li>
+                  <li><i class="icon "></i> Express</li>
+                  <li><i class="icon "></i> Handelbars.js</li>
+                  <li><i class="icon "></i> ReactJS</li>
+                </ul>
               </div>
             </div>
             <div class="slide" id="portfolio">
               <div class="slide-container">
                 <h2>Portfolio</h2>
                 <ul>
-                  <li>Portfolio One</li>
-                  <li>Portfolio Two</li>
-                  <li>Portfolio Three</li>
-                  <li>Portfolio Four</li>
-                  <li>Portfolio Five</li>
-                  <li>Portfolio Six</li>
+                  <li><a target="_blank" href="https://zypherone.github.io/moody-drinks" title="Moody Drinks"><img src="images/portfolio/moody-drinks.jpg" alt="Moody Drinks" /></a></li>
+                  <li><a target="_blank" href="https://zypherone.github.io/AMT" title="A Moment in Time"><img src="images/portfolio/AMT.jpg" alt="A Moment in Time" /></a></li>
+                  <li><a target="_blank" href="https://zypherone.github.io/WDD" title="Weather Dashboard"><img src="images/portfolio/WDD.jpg" alt="Weather Dashboard" /></a></li>
+                  <li><a target="_blank" href="https://zypherone.github.io/CQM" title="Coding Quiz Master"><img src="images/portfolio/CQM.jpg" alt="Coding Quiz Master" /></a></li>
                 </ul>
               </div>
             </div>
@@ -85,16 +97,16 @@
                 <p>Keen to contact me for work oportunity? Or just a consulting gig? Feel free to drop me a line, and I will be right back at you with a solution!</p>
                 <form>
                   <label>
-                    <input type="text" name="name" placeholder ="Name" />
+                    <input type="text" name="name" placeholder ="Name" required />
                   </label>
                   <label>
-                    <input type="email" name="email" placeholder="Email" />
+                    <input type="email" name="email" placeholder="Email" required />
                   </label>
                   <label>
                     <input type="text" name="subject" placeholder="Subject" />
                   </label>
                   <label>
-                    <textarea name="message" placeholder="Message"></textarea>
+                    <textarea name="message" placeholder="Message" required></textarea>
                   </label>
                   <label>
                     <input type="submit" value="Send" />

@@ -248,11 +248,17 @@ h2 span {
   */
   font-family: 'La Belle Aurore', cursive;
   font-size: 15vw;
-  padding-top: 100px;
+  letter-spacing: -0.05em;
   text-align: center;
-  transform: scale(1.4);
+  /*transform: scale(1.4);*/
+  padding-top: 25%;
 }
 
+#home .intro-tag-line {
+  background: #181818;
+  margin: -66px -50px 0 -50px;
+  padding: .5em;
+}
 #home p {
   text-align: center;
 }
@@ -273,6 +279,7 @@ h2 span {
 #about img {
   border-radius: .5em;
   float: right;
+  filter: grayscale(100%);
   margin: 0   0 50px 50px;
 }
 
@@ -294,17 +301,58 @@ h2 span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content:  space-between;
 }
 
+
+ #portfolio li {
+  margin-bottom: 5%; /* (100-32*3)/2 */
+  /*padding-bottom: 32%; /* Same as width, sets height */*/
+  position: relative;
+  width: 30%;
+ }
+
+ #portfolio li a {
+   display: block;
+   min-height: 100%;
+   min-width: 100%;
+ }
+
+ #portfolio li img {
+   border: 1px solid #181818;
+   border-radius: .3em;
+   box-sizing: border-box;
+   display: block;
+   max-width: 100%;
+   /*opacity: 0;*/
+ }
+/*
 #portfolio li {
   width: calc(100% / 3);
 }
 
-#portfolio li:after {
+#portfolio li a {
+  background: #eee;
+  box-sizing: border-box;
+  display: block;
+  min-width: 100;
+  padding: 1em; 
+  margin: 1em; 
+}
+
+#portfolio li a:after {
   content: '';
   display: table;
   padding-top: 100%;
 }
+
+#portfolio img {
+  border-radius: .5em;
+  display: none;  
+  max-width: 100%;
+}
+
+*/
 
 @media only screen and (max-width: 700px) {
   #portfolio li {
@@ -344,9 +392,23 @@ textarea {
   height: calc(1em * 20)
 }
 
-input[type  =submit] {
+input[type=submit] {
   cursor: pointer;
 }
+/*
+input[type=text]:hover:invalid,
+input[type=email]:hover:invalid,
+textarea:hover:invalid {
+  background: pink; 
+}
+
+input[type=text]:hover:valid,
+input[type=email]:hover:valid,
+textarea:hover:valid {
+  background: green;
+}
+*/
+
 
 @media only screen and (max-width: 700px) {
 
