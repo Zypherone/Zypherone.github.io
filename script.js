@@ -47,7 +47,6 @@ $(document).on('touchmove', '.slide', moveTouch);
 
 
 if (location.hash) {
-  console.log(location.hash);
   $('a[data-type="slide"][href="' + location.hash + '"]').trigger('click');
 }
 
@@ -94,11 +93,6 @@ function moveTouch(e) {
 
 $('form').on('submit', function(e) {
   e.preventDefault();
-
-  //console.log();
-
-  //console.log(e);
-
   
   Email.send({
     SecureToken : "a39c81ab-036d-4443-a7bd-bf78b70e4cde",

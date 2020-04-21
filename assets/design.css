@@ -428,6 +428,7 @@ form {
 
 form .msg {
   display: none;
+  opacity: 0;
 }
 
 form .msg-sent {
@@ -435,6 +436,7 @@ form .msg-sent {
   border: 1px solid #6c8189;
   display: block;
   margin: 1em 0;
+  opacity: 1;
   padding: 1em;
 }
 
