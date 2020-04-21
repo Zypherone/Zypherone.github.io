@@ -426,6 +426,18 @@ form {
 
 }
 
+form .msg {
+  display: none;
+}
+
+form .msg-sent {
+  background: #333333;
+  border: 1px solid #6c8189;
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+}
+
 label {
   display: block;
   margin: 1em 0;

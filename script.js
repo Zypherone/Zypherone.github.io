@@ -95,7 +95,27 @@ function moveTouch(e) {
 $('form').on('submit', function(e) {
   e.preventDefault();
 
-  console.log(this);
+  //console.log();
+
+  //console.log(e);
+
+  
+  Email.send({
+    SecureToken : "a39c81ab-036d-4443-a7bd-bf78b70e4cde",
+    To : 'danutuckersaunders@email.com',
+    From :  e.currentTarget[1].value,
+    Subject : "CONTACT | Name: " + e.currentTarget[0].value + " - " + e.currentTarget[2].value,
+    Body : "From: " + e.currentTarget[0].value + "\n" + e.currentTarget[3].value
+  }).then(
+    message => {
+      $('.msg').addClass('msg-sent');
+
+      setTimeout(function() {
+        $('.msg').removeClass('msg-sent');
+      }, 2000);
+    }
+  );
+  
 });
 
 /*
@@ -136,14 +156,6 @@ $('form').on('submit', function() {
 });
 
 /*
-Email.send({
-  SecureToken : "a39c81ab-036d-4443-a7bd-bf78b70e4cde",
-  To : 'danutuckersaunders@email.com',
-  From : "danutuckersaunders@email.com",
-  Subject : "This is the subject",
-  Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+
 
 */
