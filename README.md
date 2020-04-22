@@ -34,6 +34,8 @@ This project is licensed under the Apache License 2.0
 Myself - Zypherone
 
 ### GitHub Username & Email
+
+Username & Email | Avatar
 ---|---
 Zypherone<br />zypherone@github.com | ![Avatar](https://avatars1.githubusercontent.com/u/360494?v=4 "Avatar")
 
