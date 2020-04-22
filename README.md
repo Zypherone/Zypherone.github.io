@@ -17,7 +17,10 @@ From the project folder, open the index.html file with your preferred browser.
 
 Desktop Version | Mobile Version
 ------------ | -------------
-<img src="readme/desktop-home.jpg?raw=true" width="50%"> | <img src="readme/mobile-home.jpg?raw=true">
+<img src="readme/desktop-home.jpg?raw=true"> | <img src="readme/mobile-home.jpg?raw=true">
+<img src="readme/desktop-about.jpg?raw=true"> | <img src="readme/mobile-about.jpg?raw=true">
+<img src="readme/desktop-portfolio.jpg?raw=true"> | <img src="readme/mobile-portfolio.jpg?raw=true">
+<img src="readme/desktop-contact.jpg?raw=true"> | <img src="readme/mobile-contact.jpg?raw=true">
 
 ### Built With
 * [VScode](https://code.visualstudio.com/) - The editor of choice
