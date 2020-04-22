@@ -33,10 +33,8 @@ This project is licensed under the Apache License 2.0
 ### Contributors
 Myself - Zypherone
 
-### GitHub Username
-zypherone@github.com
-
-### Avatar Image
-https://avatars1.githubusercontent.com/u/360494?v=4
+### GitHub Username & Email
+---|---
+Zypherone<br />zypherone@github.com | ![Avatar](https://avatars1.githubusercontent.com/u/360494?v=4 "Avatar")
 
 Copyright 2020 &copy;
