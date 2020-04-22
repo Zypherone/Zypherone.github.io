@@ -18,9 +18,10 @@ From the project folder, open the index.html file with your preferred browser.
 * [VScode](https://code.visualstudio.com/) - The editor of choice
 - [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
 
-### License Apache License 2.0
+### License 
 
-This project is licensed under the Apache License 2.0 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License 2.0 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ### Contributors
 Myself - Zypherone
