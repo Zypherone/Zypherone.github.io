@@ -37,6 +37,6 @@ Myself - Zypherone
 
 Username & Email | Avatar
 ---|---
-Zypherone<br />zypherone@github.com | ![Avatar](https://avatars1.githubusercontent.com/u/360494?v=4 "Avatar")
+Zypherone<br />zypherone@github.com | <img src="https://avatars1.githubusercontent.com/u/360494?v=" width="250">
 
 Copyright 2020 &copy;
