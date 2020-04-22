@@ -1,49 +1,34 @@
-# Zypherone.github.io
+# Master Portfolio Website
 
-A mobile-first agile portfolio, showcasing some of my skills.
+## Table of Content
+Description,Installation,Usage,License
 
-To view a live copy of this website, please visit: https://zypherone.github.io/
+## Description    
+This is my new mobile first portfolio, show casing my latest work and skills.
 
 ## Getting Started
 
-lone the repository or download and unpack the source code of the project. From the project folder, open the index.html file with your preferred browser.
+### Installation
+Clone or download the entire directory and update the index.html file as you see fit.
 
-### Prerequisites
+### Usage
+From the project folder, open the index.html file with your preferred browser.
 
-What things you need to install the software and how to install them
+### Built With
+* [VScode](https://code.visualstudio.com/) - The editor of choice
+- [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
 
-```
-Give examples
-```
+### License Apache License 2.0
 
-## Built With
+This project is licensed under the Apache License 2.0 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) - see the [LICENSE.md](LICENSE.md) file for details
 
-* [jQuery](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+### Contributors
+Myself - Zypherone
 
-## Contributing
+### GitHub Username
+zypherone@github.com
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+### Avatar Image
+https://avatars1.githubusercontent.com/u/360494?v=4
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-
+Copyright 2020 &copy;
