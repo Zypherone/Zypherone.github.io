@@ -1,3 +1,4 @@
+// Build a touch/click event for the save items
 function touchAndClickEvent(evt, type) {
 
   evt.preventDefault();
@@ -16,9 +17,11 @@ function touchAndClickEvent(evt, type) {
 
   }
 
+  // Update the history button
   window.history.pushState(null, null, $(this).attr('href'));
 }
 
+// Build the next/prev buttons for each slide
 $.each($('.slide'), function(key, value) {
 
   const elm = {
@@ -31,6 +34,7 @@ $.each($('.slide'), function(key, value) {
     next: `<div class="slide-button slide-next"><a data-type="slide" href="#${elm.next}"><i class="icon chevron right"><i></a></div>`
   };
 
+  // Ensure we don't add them where no slide exist for either prev or next.
   if (elm.prev !== undefined) {
     $(value).prepend(button.prev);
   }
@@ -39,6 +43,7 @@ $.each($('.slide'), function(key, value) {
   }
 })
 
+// Apply even delegation for clik and touch events, including swiping.
 $(document).on('click', 'a[data-type="slide"]', touchAndClickEvent);
 $(document).on('touchstart', 'a[data-type="slide"]', touchAndClickEvent);
 
@@ -46,18 +51,23 @@ $(document).on('touchstart', '.slide', startTouch);
 $(document).on('touchmove', '.slide', moveTouch);
 
 
+// Lets ensure we only trigger for those with # URLs
 if (location.hash) {
   $('a[data-type="slide"][href="' + location.hash + '"]').trigger('click');
 }
 
+// Lets pre and culculate touch movement for swipe left/right.
 var initialX = null;
 var initialY = null;
  
+// Let grab the initial touch value
 function startTouch(e) {
   initialX = e.touches[0].clientX;
   initialY = e.touches[0].clientY;
 };
  
+
+// Lets determind whether its a valid swipe.
 function moveTouch(e) {
   if (initialX === null) {
     return;
@@ -90,6 +100,8 @@ function moveTouch(e) {
   
   e.preventDefault();
 };
+
+// Build the form checks.
 
 $('form').on('submit', function(e) {
   e.preventDefault();
@@ -124,45 +136,3 @@ $('form').on('submit', function(e) {
   );
   
 });
-
-/*
-let touchStartX = 0,
-    touchEndY   = 0;
-
-    /*
-$(document).on('touchstart', '.slide', function(evt) {
-  touchStartX = evt.changedTouches[0].screenX;
-  touchStartY = evt.changedTouches[0].screenY;
-});
-
-$(document).on('touchend', '.slide', function(evt) {
-
-  //console.log(touchStart,   evt.changedTouches[0].screenX);
-  const touchEndX = evt.changedTouches[0].screenX;
-  const touchEndY = evt.changedTouches[0].screenY;
-
-    console.log('X', touchStartX, touchEndX);
-    console.log('Y',touchStartY, touchEndY);
-
-  if (touchStartX !== 0 && touchStartX !== touchEndX) {
-    
-    const touchDirection = touchStartX < touchEndX ? 'prev' : 'next';
-
-    const elmId = $($(evt)[0].currentTarget).attr('id');
-
-    $(`#${elmId} .slide-${touchDirection} a`).trigger('click', 'touch');
-
-    
-  }
-
-  //touchStart = 0;
-});
-
-$('form').on('submit', function() {
-  console.log(this);
-});
-
-/*
-
-
-*/
