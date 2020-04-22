@@ -101,6 +101,12 @@ function moveTouch(e) {
   e.preventDefault();
 };
 
+// Anti Spam measure
+$('.antispam').attr('href', 'mailto:' + $('.antispam')
+  .attr('href')
+  .replace('/a/', '@')
+  .replace('/d/', '.'));
+
 // Build the form checks.
 
 $('form').on('submit', function(e) {
