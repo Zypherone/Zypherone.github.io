@@ -55,7 +55,7 @@
                 <h2>About</h2>
                 <img class="right" src="images/profile-danu-tucker-saunders.jpg" alt="Danu Tucker-Saunders (Zypherone) - Full-Stack Developer" />
                 <p>I am a full-stack developer, with over five years’ experience in back-end development. Based in Sydney, Australia, I recently completed a 24-week intensive program at Sydney University; focused on gaining additional technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handelbars.js & ReactJS.</p>
-                <p><a class="download-button" href="assets/resume.pdf" title="Resume/CV | Danu Tucker-Saunders | Full Stack Developer" target="_blank">Download CV</a></p>
+                <p><a class="download-button" href="assets/resume.pdf" title="Resume/CV | Danu Tucker-Saunders | Full Stack Developer" target="_blank"><span class="icon-download"></span> Download CV</a></p>
                 <h3>History</h3>
                 <!--
                 <img src="images/danu-tucker-saunders.png" alt="Danu Tucker-Saunders (Zypherone) - Full-Stack Developer" />
@@ -100,7 +100,12 @@
                 <p>Keen to contact me for work oportunity? Or just a consulting gig? Feel free to drop me a line, and I will be right back at you with a solution!</p>
                 <form>
                   <div class="msg">
-                    <p>Message sent!</p>
+                    <div class="msg-success">
+                      <p>Message sent!</p>
+                    </div>
+                    <div class="msg-waiting">
+                      <p><span class="loader"></span>  Sending...</p>
+                    </div>
                   </div>
                   <label>
                     <input type="text" name="name" placeholder ="Name"  />

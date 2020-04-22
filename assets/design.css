@@ -315,6 +315,29 @@ h2 span {
   margin: 0   0 50px 50px;
 }
 
+#about .download-button,
+#about .download-button:hover {
+  background: #181818;
+  background: repeating-linear-gradient(45deg, #181818 1px, #333333 2px, #333333 10px, #181818 11px);
+  border: 1px solid #333;
+  border: 1px solid rgba(137, 145, 153, 1);
+  border-radius: .5em;
+  color: rgba(137, 145, 153, 1);
+  display: inline-block;
+  margin: 1em 0;
+  padding: .5em 1em;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #000000;
+}
+
+#about .download-button:hover {
+  /*text-shadow: -1px -1px 1px #000000;*/
+}
+
+#about .download-button:hover {
+  box-shadow: 0 0 .2em #CDDEFF;
+}
+
 #about ul {
   display: flex;
   flex-wrap: wrap;
@@ -427,18 +450,93 @@ form {
 }
 
 form .msg {
+  opacity: 0;
+  background: #333333;
+  border: 1px solid #6c8189;
+  display: none;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+
+form .msg-success,
+form .msg-waiting {
   display: none;
   opacity: 0;
 }
 
-form .msg-sent {
-  background: #333333;
-  border: 1px solid #6c8189;
+form .active {
   display: block;
-  margin: 1em 0;
   opacity: 1;
-  padding: 1em;
 }
+
+form .loader {
+  border: 0.2em solid #6c8189;
+  border-radius: 500rem;
+  box-shadow: 0px 0px 0px 1px #181818;
+  display: inline-block;
+  height: 0.8em;   
+  opacity: 0.5; 
+  position: relative;
+  vertical-align: sub;
+  width: 0.8em;
+  
+  -webkit-animation: loader 0.6s linear;
+          animation: loader 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  
+}
+
+form .loader:before {
+  border-color: transparent;
+  border-right-color: #181818;
+  border-style: solid;
+  border-radius: 500rem;
+  border-width: .2em;
+  display: inline-block;
+  content: " ";
+  left: -.2em;
+  position: absolute;
+  top: -.2em;
+  height: 0.8em;
+  width: 0.8em;
+}
+
+form .loader:after {
+  content: " ";
+  display: inline-block;
+  box-shadow: 0px 0px 0px 1px #181818;
+  border-radius: 500rem;
+  position: absolute;
+  
+  height: 0.8em;
+  width: 0.8em;
+}
+
+
+/* Active Animation */
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 
 label {
   display: block;
@@ -466,6 +564,12 @@ textarea {
 input[type=submit] {
   cursor: pointer;
 }
+
+input[disabled=disabled],
+textarea[disabled=disabled] {
+  opacity: .3;
+}
+
 /*
 input[type=text]:hover:invalid,
 input[type=email]:hover:invalid,

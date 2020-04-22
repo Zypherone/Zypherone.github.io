@@ -93,19 +93,32 @@ function moveTouch(e) {
 
 $('form').on('submit', function(e) {
   e.preventDefault();
+
+  $('.msg').addClass('active');
+  $('.msg .msg-waiting').addClass('active');
+
+  $('form input').attr('disabled', 'disabled');
+  $('form textarea').attr('disabled', 'disabled');
   
   Email.send({
     SecureToken : "a39c81ab-036d-4443-a7bd-bf78b70e4cde",
     To : 'danutuckersaunders@email.com',
     From :  e.currentTarget[1].value,
     Subject : "CONTACT | Name: " + e.currentTarget[0].value + " - " + e.currentTarget[2].value,
-    Body : "From: " + e.currentTarget[0].value + "\n" + e.currentTarget[3].value
+    Body : "From: " + e.currentTarget[0].value + "<br /><br /><br />" + e.currentTarget[3].value
   }).then(
     message => {
-      $('.msg').addClass('msg-sent');
+      $('.msg .msg-waiting').removeClass('active');
+      $('.msg .msg-success').addClass('active');
+      $('form').get(0).reset();
 
       setTimeout(function() {
-        $('.msg').removeClass('msg-sent');
+        $('.msg').removeClass('active');
+        $('.msg .msg-success').removeClass('active');
+
+        $('form input').removeAttr('disabled');
+        $('form textarea').removeAttr('disabled');
+        
       }, 2000);
     }
   );
