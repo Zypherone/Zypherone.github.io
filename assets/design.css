@@ -523,7 +523,7 @@ textarea {
 }
 
 textarea {
-  height: calc(1em * 20)
+  height: calc(1em * 15)
 }
 
 input[type=submit] {
