@@ -1,4 +1,3 @@
-{::options parse_block_html="true" /}
 # Master Portfolio Website
 
 ## Table of Content
