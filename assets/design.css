@@ -243,28 +243,28 @@ h2 span {
 }
 
 #home .intro {
-  /*
-  background: blue;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: -webkit-text;
-  background-clip: text;
-  */
   font-family: 'La Belle Aurore', cursive;
   font-size: 15vw;
   letter-spacing: -0.05em;
   text-align: center;
-  /*transform: scale(1.4);*/
   padding-top: 25%;
 }
 
 #home .intro-tag-line {
   background: #181818;
-  margin: -66px -50px 0 -50px;
+  margin: -5% -50px 0 -50px;
   padding: .5em;
 }
 #home p {
   text-align: center;
+}
+
+@media only screen and (max-width: 700px), (max-height: 300px) {
+
+  #home .intro {
+    padding-top: 55%;
+  }
+
 }
 
 /*
@@ -277,16 +277,6 @@ h2 span {
     display: block;
   }
 
-  /* Track 
-  #about .slide-container::-webkit-scrollbar-track {
-    background: transparent;
-    background: rgba(137, 145, 153, 0.5);
-  }
-
-  #about .slide-container::-webkit-scrollbar-track:hover {
-    background: rgba(137, 145, 153, 1);
-  }
-*/
   /* Handle */
   #about .slide-container::-webkit-scrollbar-thumb {
     background: #6C8189;
@@ -294,11 +284,6 @@ h2 span {
     background: repeating-linear-gradient(45deg, #181818 1px, #333333 2px, #333333 10px, #181818 11px);
     border-radius: 1em;
     border: 1px solid rgba(137, 145, 153, 1);
-  }
-
-  /* Handle on hover */
-  #about .slide-container::-webkit-scrollbar-thumb:hover {
-    
   }
 
   #about .slide-container {
@@ -330,9 +315,6 @@ h2 span {
   text-shadow: -1px -1px 1px #000000;
 }
 
-#about .download-button:hover {
-  /*text-shadow: -1px -1px 1px #000000;*/
-}
 
 #about .download-button:hover {
   box-shadow: 0 0 .2em #CDDEFF;
@@ -359,9 +341,13 @@ h2 span {
 
 @media only screen and (max-width: 700px), (max-height: 300px) {
 
-  #about img {
+  #about img.right {
     max-width: 45%;
     margin: 0 0 15px 15px;
+  }
+
+  #about li {
+    width: 100%;
   }
 
 }
@@ -386,6 +372,14 @@ h2 span {
   width: 30%;
  }
 
+@media only screen and (max-width: 700px), (max-height: 300px) {
+
+  #portfolio li {
+    width: 100%;
+  }
+
+}
+
  #portfolio li a {
   display: block;
   min-height: 100%;
@@ -406,44 +400,15 @@ h2 span {
   transform: scale(1.25);
   transform-origin: center;
 }
-/*
-#portfolio li {
-  width: calc(100% / 3);
-}
-
-#portfolio li a {
-  background: #eee;
-  box-sizing: border-box;
-  display: block;
-  min-width: 100;
-  padding: 1em; 
-  margin: 1em; 
-}
-
-#portfolio li a:after {
-  content: '';
-  display: table;
-  padding-top: 100%;
-}
-
-#portfolio img {
-  border-radius: .5em;
-  display: none;  
-  max-width: 100%;
-}
-
-*/
-
-@media only screen and (max-width: 700px) {
-  #portfolio li {
-    width: calc(100% / 2);
-  }
-}
-
 
 /*
  * Contact Page
  */
+
+.contact-details,
+.contact-details:hover {
+  text-decoration: none;
+}
 
 form {
 
