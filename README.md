@@ -4,8 +4,13 @@
 
 - [Description](#description)
 - [Getting Started](#getting-Started)
- - [Installation](#installation)
- - [Usage] (#usage)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Built With](#built-with)
+- [License](#license)
+- [Contributors](#Contributors)
+- [GitHub Details](#github-details)
+
 
 ## Description    
 This is my new mobile first portfolio, show casing my latest work and skills.
@@ -29,15 +34,15 @@ Mobile Version | Desktop Version
 * [VScode](https://code.visualstudio.com/) - The editor of choice
 - [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
 
-### License 
+## License 
 
 This project is licensed under the Apache License 2.0 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-### Contributors
+## Contributors
 Myself - Zypherone
 
-### GitHub Details
+## GitHub Details
 
 Username & Email | Avatar
 ---|---
