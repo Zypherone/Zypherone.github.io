@@ -14,7 +14,7 @@ Clone or download the entire directory and update the index.html file as you see
 ### Usage
 From the project folder, open the index.html file with your preferred browser.
 
-![Screenshot](readme/desktop-home.jpg?raw=true "Screenshot") {:align="right" width="96px"}
+![Screenshot](readme/desktop-home.jpg?raw=true "Screenshot"){:align="right" width="96px"}
 ![Screenshot](readme/mobile-home.jpg?raw=true "Screenshot")
 ![Screenshot](readme/desktop-about.jpg?raw=true "Screenshot") <!-- .element width="50%" -->
 ![Screenshot](readme/mobile-about.jpg?raw=true "Screenshot")
