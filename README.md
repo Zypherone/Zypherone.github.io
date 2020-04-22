@@ -1,7 +1,11 @@
 # Master Portfolio Website
 
 ## Table of Content
-Description,Installation,Usage,License
+
+- [Description](#description)
+- [Getting Started](#getting-Started)
+ - [Installation](#installation)
+ - [Usage] (#usage)
 
 ## Description    
 This is my new mobile first portfolio, show casing my latest work and skills.
@@ -33,7 +37,7 @@ This project is licensed under the Apache License 2.0
 ### Contributors
 Myself - Zypherone
 
-### GitHub Username & Email
+### GitHub Details
 
 Username & Email | Avatar
 ---|---
