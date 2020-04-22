@@ -15,12 +15,12 @@ Clone or download the entire directory and update the index.html file as you see
 ### Usage
 From the project folder, open the index.html file with your preferred browser.
 
-Desktop Version | Mobile Version
+Mobile Version | Desktop Version
 ------------ | -------------
-<img src="readme/desktop-home.jpg?raw=true"> | <img src="readme/mobile-home.jpg?raw=true">
-<img src="readme/desktop-about.jpg?raw=true"> | <img src="readme/mobile-about.jpg?raw=true">
-<img src="readme/desktop-portfolio.jpg?raw=true"> | <img src="readme/mobile-portfolio.jpg?raw=true">
-<img src="readme/desktop-contact.jpg?raw=true"> | <img src="readme/mobile-contact.jpg?raw=true">
+![Screenshot](readme/mobile-home.jpg?raw=true "Screenshot") | ![Screenshot](readme/desktop-home.jpg?raw=true "Screenshot") 
+![Screenshot](readme/mobile-about.jpg?raw=true "Screenshot") | ![Screenshot](readme/desktop-about.jpg?raw=true "Screenshot") 
+![Screenshot](readme/mobile-portfolio.jpg?raw=true "Screenshot") | ![Screenshot](readme/desktop-portfolio.jpg?raw=true "Screenshot") 
+![Screenshot](readme/mobile-contact.jpg?raw=true "Screenshot") | ![Screenshot](readme/desktop-contact.jpg?raw=true "Screenshot") 
 
 ### Built With
 * [VScode](https://code.visualstudio.com/) - The editor of choice
