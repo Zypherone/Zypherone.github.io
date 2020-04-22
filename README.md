@@ -14,6 +14,15 @@ Clone or download the entire directory and update the index.html file as you see
 ### Usage
 From the project folder, open the index.html file with your preferred browser.
 
+![Screenshot](readme/desktop-home.jpg?raw=true "Screenshot")
+![Screenshot](readme/mobile-home.jpg?raw=true "Screenshot")
+![Screenshot](readme/desktop-about.jpg?raw=true "Screenshot")
+![Screenshot](readme/mobile-about.jpg?raw=true "Screenshot")
+![Screenshot](readme/desktop-portfolio.jpg?raw=true "Screenshot")
+![Screenshot](readme/mobile-portfolio.jpg?raw=true "Screenshot")
+![Screenshot](readme/desktop-contact.jpg?raw=true "Screenshot")
+![Screenshot](readme/mobile-contact.jpg?raw=true "Screenshot")
+
 ### Built With
 * [VScode](https://code.visualstudio.com/) - The editor of choice
 - [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
