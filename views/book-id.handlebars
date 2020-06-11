@@ -1,0 +1,39 @@
+<form action="/admin/book/id/:id" method="POST">
+  {{#each rooms}}
+    <h2>Booking Room Number #{{this.id}}</h2>
+    <input type="hidden" name="room" value="{{this.id}}">
+  {{/each}}
+  <label>
+    <span>First Name</span>
+    <input type="text" name="firstname" placeholder="First Name"  required="required">
+  </label>
+  <label>
+    <span>Last Name</span>
+    <input type="text" name="lastname" placeholder="First Name" required="required">
+  </label>
+  <label>
+    <span>Contact Number</span>
+    <input type="text" name="phone" placeholder="Contact Number" required="required">
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="text" name="email" placeholder="Email"  required="required"> 
+  </label>
+  <label>
+    <span>Check-in Date</span>
+    <input type="date" name="checkin"  required="required">
+  </label>
+  <label>
+    <span>Check-out Date</span>
+    <input type="date" name="checkout"  required="required">
+  </label>
+  <label>
+    <input type="submit" name="book" value="Create Reservation">
+  </label>
+</form>
+
+<div>
+  <form action="/" method="GET">
+    <button type="submit" id="go-back">Back to Home</button>
+  </form>
+</div>  

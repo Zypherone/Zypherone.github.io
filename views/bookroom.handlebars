@@ -1,0 +1,41 @@
+<h2>Book a Room</h2>
+<form action="/room/book" method="POST">
+  <label>
+    <span>Room Number:</span>
+    <select name="room" required>
+      <option value=""disabled selected hidden>Choose a room</option>
+      {{#each rooms}}
+        {{#if this.dataValues.available}}
+          <option value="{{this.dataValues.id}}">{{this.dataValues.id}}</option>
+        {{/if}}
+      {{/each}}
+    </select>
+  </label>
+  <label>
+    <span>First Name</span>
+    <input type="text" name="firstname" placeholder="First Name">
+  </label>
+  <label>
+    <span>Last Name</span>
+    <input type="text" name="lastname" placeholder="First Name">
+  </label>
+  <label>
+    <span>Contact Number</span>
+    <input type="text" name="contactnumber" placeholder="Contact Number">
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="text" name="email" placeholder="First Name">
+  </label>
+  <label>
+    <span>Check-in Date</span>
+    <input type="date" name="checkin">
+  </label>
+  <label>
+    <span>Check-out Date</span>
+    <input type="date" name="checkout">
+  </label>
+  <label>
+    <input type="submit" name="book" value="Book Now!">
+  </label>
+</form>
