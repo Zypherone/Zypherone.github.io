@@ -11,3 +11,5 @@ _old_/portfolio-01.png
 _old_/portfolio-02.jpg
 _old_/portfolio.html
 _old_/css/style.css
+node_modules
+package-lock.json
