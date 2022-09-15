@@ -14,7 +14,7 @@
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![JS Standard][build-style-shield]][build-style-url] [![MIT License][license-shield]][license-url]
 
 # Master Portfolio Website with React
-This is my new portfolio using React, show casing my latest work and skills.
+This is my new portfolio version 1.0.1 using React, show casing my latest work and skills.
 
 #### Table of Contents
 - [Screenshots](#Screenshots)
